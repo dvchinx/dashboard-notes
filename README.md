@@ -5,19 +5,19 @@ Clon sencillo de Google Keep con funcionalidades completas de gestión de notas,
 ## 🚀 Características
 
 ### Usuario Normal
-- ✅ **CRUD de Notas**: Crear, editar, eliminar y ver notas
-- 📌 **Fijar notas**: Organiza las notas importantes en la parte superior
-- 🎨 **5 Colores**: Amarillo, verde, azul, rosa y gris
-- 🏷️ **Categorías**: Crea y gestiona categorías personalizadas
-- 🔍 **Búsqueda**: Busca notas por título o contenido
-- 📱 **Diseño responsive**: Funciona en móvil y escritorio
+- **CRUD de Notas**: Crear, editar, eliminar y ver notas
+- **Fijar notas**: Organiza las notas importantes en la parte superior
+- **5 Colores**: Amarillo, verde, azul, rosa y gris
+- **Categorías**: Crea y gestiona categorías personalizadas
+- **Búsqueda**: Busca notas por título o contenido
+- **Diseño responsive**: Funciona en móvil y escritorio
 
 ### Panel de Administración
-- 👥 **Ver todos los usuarios**: Lista completa de usuarios registrados
-- 📊 **Estadísticas**: Total de usuarios, notas y notas fijadas
-- 👀 **Ver todas las notas**: Acceso de solo lectura a todas las notas
-- 🗑️ **Eliminar notas**: Capacidad de eliminar notas de cualquier usuario
-- 🔎 **Filtrar por usuario**: Ver notas de un usuario específico
+- **Ver todos los usuarios**: Lista completa de usuarios registrados
+- **Estadísticas**: Total de usuarios, notas y notas fijadas
+- **Ver todas las notas**: Acceso de solo lectura a todas las notas
+- **Eliminar notas**: Capacidad de eliminar notas de cualquier usuario
+- **Filtrar por usuario**: Ver notas de un usuario específico
 
 ## 📁 Estructura del Proyecto
 
@@ -40,35 +40,6 @@ dashboard/
 └── package.json
 ```
 
-## ⚙️ Configuración
-
-### 1. Instalar dependencias
-
-```bash
-npm install
-```
-
-### 2. Configurar Supabase
-
-1. Ve a [supabase.com](https://supabase.com) y crea un proyecto
-2. En el SQL Editor, ejecuta el contenido de `supabase-setup.sql`
-3. Verifica que las tablas `users`, `categories` y `notes` se crearon correctamente
-4. Asegúrate de que las políticas RLS (Row Level Security) estén habilitadas
-
-### 3. Actualizar credenciales
-
-En `src/supabase.js`, actualiza (si es necesario):
-```javascript
-const supabaseUrl = 'TU_URL_DE_SUPABASE';
-const supabaseKey = 'TU_ANON_KEY_DE_SUPABASE';
-```
-
-### 4. Ejecutar el proyecto
-
-```bash
-npm run dev
-```
-
 ## 👤 Usuarios
 
 ### Usuario Admin
@@ -84,11 +55,10 @@ npm run dev
 
 ## 🎨 Colores de Notas
 
-- 🟡 Amarillo (default)
-- 🟢 Verde
-- 🔵 Azul
-- 🩷 Rosa
-- ⚫ Gris
+- Amarillo (default)
+- Verde
+- Azul
+- Gris
 
 ## 📋 Base de Datos
 
@@ -135,31 +105,10 @@ updated_at TIMESTAMP
 - **Bundler**: Vite
 - **Estilo**: CSS personalizado inspirado en Google Keep
 
-## 📝 Notas Importantes
-
-1. El campo `password` debe ser eliminado de la tabla `users` (ejecuta el SQL proporcionado)
-2. Supabase Auth maneja todas las contraseñas de forma segura
-3. El admin se detecta por email (`admin@admin.com`), puedes cambiar esta lógica
-4. Las notas sin categoría son válidas (`category_id` puede ser `NULL`)
-
-## 🚨 Solución de Problemas
-
-### Error: "No se pueden cargar las notas"
-- Verifica que las políticas RLS estén configuradas correctamente
-- Asegúrate de que el usuario esté autenticado
-
-### Error: "Admin no puede ver notas de otros usuarios"
-- Verifica que las políticas de admin estén creadas en Supabase
-- Confirma que el email del admin es exactamente `admin@admin.com`
-
-### Error: "Cannot read properties of undefined"
-- Verifica que Supabase esté configurado correctamente
-- Revisa la consola del navegador para más detalles
-
 ## 📄 Licencia
 
 Este es un proyecto educativo de demostración.
 
 ---
 
-¡Disfruta de tu clon de Google Keep! 📝✨
+¡Disfruta de este clon de Google Keep! 📝✨
